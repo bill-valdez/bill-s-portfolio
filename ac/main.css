@@ -1,0 +1,864 @@
+@charset "UTF-8";
+/* color palette
+#462445	=>	Dark Purple
+#64384f	=>	Medium Purple
+#ec6b55 =>	Coral
+#6bb6a1 =>	Aqua
+*/
+/*
+==Fonts
+*/
+/*limited reset*/
+html, body, div, sectioWeb&nbsp;Designn, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align:baseline;
+	font: inherit;
+}
+/*html5 display rule*/
+address, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, main, nav, section, summary {
+	display: block;
+}
+
+/* apply a natural box layout model to all elements */
+/* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*micro-clearfix by Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/*/
+/* For modern browsers */
+.cf:before, .cf:after {
+	content:"";
+	display:table;
+}
+.cf:after {
+	clear:both;
+}
+.cf {
+	zoom:1;
+}
+/*
+== Basic Links and button actions
+*/
+a {
+	text-decoration: none;
+	color: #462445; /* dk purple */
+}
+a:hover, a:focus {
+	outline: none;
+	border: none;
+	background-color:rgba(100,56,79,.3); /* med purple - transparent*/
+}
+a img {
+	border: none;
+	outline: 0;
+}
+a.action, input[type=submit], input[type=button], button{
+	background-color:#ddd; /* gray */
+	display:block; 
+	-webkit-border-radius: 6px;    
+	border-radius: 6px;
+	font-size:1.2em;
+	text-align: center;
+	border:none;
+	color:#000;
+	border-bottom:solid 1px #ccc;
+	padding:.5em 1em;
+	width:90%;
+	margin:0 auto;
+}
+.action.primary, input[type=submit]{
+	background-color: #6bb6a1; /* turquoise */
+	color:#fff;
+	border-color:#3a6459;
+}
+
+/* 
+== Base background and fonts
+*/
+html {
+	background-color: #462445 ;/* dk purple */
+	border-top:solid 8px #2b152a;
+}
+
+body {
+	font: 100% Verdana, Tahoma,  Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+	background: #efefef;
+	color: #000;
+	font-weight:normal;
+	font-style:normal;
+	width: 98%;
+	margin: 0 auto;
+	min-width: 320px;	
+}
+h1, h2, h3, h4{
+	font-family: Tahoma, Verdana, sans-serif;
+}
+
+/*
+== header styles
+*/
+header {
+	width: 100%;
+	padding-top: 1px;
+	overflow: hidden;
+	background-color:#462445;
+	height: 70px;
+}
+
+header h1 {
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-position: center top;	
+	min-height: 60px;
+	display: block;
+}
+header h1 a{
+	text-indent: -99999em;
+	display: block;
+	min-height: 60px;
+}
+header a {
+	text-decoration: none;
+	border: none;
+	color: white;
+}
+header a:hover {
+	border: none;
+	background-color: transparent;
+}
+header h2 {
+	display: none;
+}
+/*
+== nav styles
+@source http://codepen.io/bradfrost/pen/sHvaz
+@see scripts/main.js, top
+*/
+
+a.menu-link { /*  toggle menu button */
+	display: block;
+	padding: 1em;
+	background-color:#64384f; /* dk purple */
+	color:white;
+	width:100%;
+	border: none;
+	
+}
+#menu {
+	background-color:#64384f;  /* dk purple */
+	/*clear: both;*/
+	-webkit-transition: all 0.3s ease-out;  /* CSS enhancement - animation */ 
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.js #menu {
+	overflow: hidden;
+	max-height: 0;
+}
+#menu.active {
+	max-height: 15em;
+}
+#menu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#menu li a {	
+	text-transform: uppercase;
+	display: block;
+	color: white;
+	border: none;
+	font-size: 1.2em;
+	margin-bottom: 1px;
+	padding-left: 1em;
+	line-height: 2em;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+/*end new better menu*/
+
+
+
+#menu a:hover,
+#menu a:focus{
+	background-color: #b0606d;
+}
+#menu a.current {
+	color: rgb(123, 121, 143);
+	cursor: default;
+	color: rgb(237, 228, 214);
+}
+#menu {
+	width: auto;
+	margin: 0;
+	margin-bottom: 1em;
+	overflow: hidden
+}
+
+/*misson styles*/
+
+.mission {
+	text-align: center;
+	margin: 0 auto;
+	
+}
+
+.mission h1 {
+	font-weight: bold;
+	font-size: 1.6em;
+	text-align: center;
+	margin-bottom: .5em;
+	
+}
+
+
+/*
+== Fluid Images
+*/
+img{
+	max-width: 100%;
+	margin:0 auto;
+	display: block; /* prevents weird inline-gaps */
+}
+
+/*
+== page-content styles
+*/
+.page-content{
+	margin-top: 1em;
+}
+.page-content article{
+	width:90%;
+	margin:0 auto;
+}
+
+.feature {
+	
+	margin: 2em 0;
+}
+
+.page-content h1 {
+	font-size: 1.8em;
+	
+}
+
+.feature h2 a {
+	color: rgb(76, 67, 65);
+	border: none;
+}
+
+article h2 a:hover {
+	color: rgb(123, 121, 143);
+	border: none;
+}
+
+#demo-video h1, #demo-video p{
+	display: none; /* hide these elements in the smallest devices */
+}
+.preview a, .preview a:hover {
+	display: block;
+	border: none;
+	height:100%;
+}
+
+.feature {
+	margin-bottom: 1.6em;
+	overflow: hidden;
+	position: relative;
+
+}
+
+.feature h2 {
+	font-size: 1.6em;
+	margin-bottom: 0;
+}
+
+.caption {
+	font-size: .8em;
+	margin-top: 1em;
+}
+
+article p.pubdate {
+	font-size: 1em;
+	text-transform: uppercase;
+	margin-bottom: 1em;
+}
+
+article .preview {
+	height: 175px;
+	width:100%;
+}
+
+.feature-personalize .preview {
+	background: url(../images/sm-feature-personalize-banner.jpg) no-repeat;
+}
+
+.feature-friends .preview {
+	background: url(../images/sm-feature-friends-banner.jpg) no-repeat;
+}
+
+.feature-portable .preview {
+	background: url(../images/sm-feature-portable-banner.jpg) no-repeat;
+}
+
+/*
+== gallery styles
+*/
+.image-box{
+	position: relative;
+}
+.image-box img{
+	padding:3%;
+	background-color:#f6f6f6;
+	margin:0 0 1em 0;
+}
+/*caption*/
+.image-box h3{
+	position: absolute;
+	left: 3%;
+	bottom: 2em;
+	background-color: rgba(0,0,0,.5);
+	color:white;
+	padding:.25em;
+}
+/* 
+== contact page
+*/
+.mobile-emphasis{
+		margin:1em 0;
+	}
+
+.phone{
+	white-space: nowrap;
+
+}
+
+/*
+== form styles
+*/
+
+.page-content form{
+	width:100%;
+	margin:1em 0 3em;
+	font-size:1.2em; /*all form text gets uniformly larger */
+}
+.form-message{
+	padding:1em;
+	
+	margin: 1em 0;
+}
+.form-message h1{
+	font-size:1.4em;
+}
+.form-message.error{
+	background-color: #FBDBE0;
+	border: solid 1px #FA7477;
+}
+.form-message.success{
+	background-color: #DDFFD7;
+	border: solid 1px #12970F;
+}
+
+/*larger target area for all inputs*/
+input, textarea, select {
+	width: 100%;
+	max-width: 500px;
+	font-family: "Courier New", Courier, monospace;
+	padding:.5em;
+	font-size: 1em;
+
+}
+select, input[type=submit]{
+	font-family: inherit;
+}
+
+/* check and radio boxes are special, remove the width */
+input[type=checkbox],
+input[type=radio]{
+	width: auto;
+}
+/* on small screens, radios and checkboxes are easier to choose if they are in vertical lists */
+.choice-list{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.choice-list li{
+	background-color: rgba(0,0,0,.1);
+	margin:.5em 0;
+	
+	border-radius: 2em;
+}
+.choice-list li label{
+	display: block;
+	padding:.3em;
+	margin:0;
+}
+
+fieldset {
+	width: 100%;
+	border: none;
+	background: rgba(0,0,0,.05);
+	position: relative;
+	min-width: 250px;
+	padding:1em;
+	margin: 1em 0;	
+}
+
+legend{
+	display: block;
+	padding:.25em .5em;
+	background-color:#DDD;
+	color:#white;
+	position:relative;
+	left:-.7em;
+	font-size: 1.1em
+}
+label, .label{
+	display:block;
+	margin: .75em 0 .1em;
+	font-size: 1em;
+	clear: both;
+}
+
+input[type=radio] + label,
+input[type=checkbox] + label{
+	display:inline;
+	padding-right:1em;
+}
+
+/*in form error styles*/
+label.error{
+color:#A706DA;
+font-style: italic;
+}
+
+
+/*
+== aside styles
+*/
+aside {
+	
+	background-color: #e1e1e1;
+}
+
+aside section {
+	clear: both;
+}
+
+aside h2 {
+	font-size: 1.4em;
+	margin-bottom:1em;
+	text-align:center;
+	border: none;
+}
+aside .product-tour {
+	background-color: #ec6b55;
+	padding: 1.5em 5%;
+}
+aside .developer-blog article{
+	width: 100%;
+	padding:.5em 5% ;
+	background-color: #6ab5a0;
+}
+aside .developer-blog h2{
+	background-color: #6ab5a0;
+	text-align: center;
+	margin: 0;
+	padding-top:1em;
+}
+aside .developer-blog h3{
+	background-color:#4ba084;
+	max-width:400px;
+	margin:0 auto;
+	padding:.25em;
+}
+
+/* 
+ == Select Nav 
+ <select> replaces submenu 
+ @ source https://github.com/mattkersley/Responsive-Menu 
+ Alternative method, @source http://codepen.io/bradfrost/pen/hkuzAfrom BradFrost
+ @see scripts/main.js (bottom)
+ */
+
+ .product-tour select {
+ 	width: 100%;
+ 	font-size:1.3em; /* make it big and easy to tap */
+ }
+
+ .tour-list { 
+ 	display: none 
+ }
+
+
+/*
+== footer styles
+*/
+#page-footer {
+	clear:both;
+	padding-bottom: 2em;
+	background: #2b152a;
+	padding-top: 1.5em;
+	color:#fff;
+}
+
+#page-footer section{
+	padding:1em 5%;
+}
+#page-footer h2{
+	font-size: 1.25em;
+}
+
+/* 
+== tablet and large phone styles
+*/
+@media only screen and (min-width:480px) { 
+	
+	
+	/*
+	== nav styles
+	*/	
+	
+	/* 
+	== toggle nav  turns back into normal horizontal nav
+	@source http://codepen.io/bradfrost/pen/sHvaz 
+	@see /scripts/main.js
+	*/
+	a.menu-link {
+		display: none;
+	}
+	.js #menu {
+		max-height: none;
+	}
+	#menu  li {
+		float:left; 		
+	}
+	#menu {
+		width: 100%;		
+		padding: 0;
+		margin-bottom:0;
+	}
+	#menu li a {
+
+		font-size: 1em;
+		text-align: center;
+		cursor: pointer;
+		padding:.75em 1em;
+	}
+	
+	/*mission styles*/
+	.mission {
+		background: url(../images/sm_skyline.jpg) no-repeat;
+		background-position: top center;
+		min-height: 247px;
+	}
+
+	.mission h1 {
+		font-weight: bold;
+		font-size:2em ;
+		color: #fff;
+		line-height:1.1em;		
+		text-align: center;
+		padding:2em 0 1em;
+		text-shadow: 0px -1px 0px #29211c;
+		filter: dropshadow(color=#29211c, offx=0, offy=-1);
+		max-width: 300px;
+		margin:0 auto ;
+	}
+	.mission .action{
+		width:260px;
+	}
+
+
+	/* ==page-content styles */	
+	.page-content{
+		margin-top: 3em;
+	}
+	.feature {		
+		overflow: hidden;
+		position: relative;
+		padding: 1em 0;
+		clear: both;
+		min-height: 10em;
+	}
+
+	.video-box{
+		width:55%;
+		float:right;
+	}
+	#demo-video h1, #demo-video p{
+		display: block; /* these elements are hidden and reappear once tablet size is achieved */
+	}
+
+	article h2 {
+		font-size: 2em;
+		line-height: 1.1em;
+		float: left;
+		clear: left;
+		margin-bottom: 0;
+		width: 40%;
+	}
+	.page-content p{
+		margin:.5em 0;
+	}
+
+	#demo-video p {
+		font-size: 1em;
+		margin: 0;
+		float: left;
+		clear: left;
+		width: 40%
+	}
+
+	article p.pubdate {
+		font-size: 1em;
+		text-transform: uppercase;
+		float: left;
+		clear: left;
+		margin: 0 0 1em;
+		width: 40%;
+	}
+
+	article .preview {
+		height: 175px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 55%;
+	}
+
+	
+	/* ==gallery styles*/
+	.image-box{
+		width:48%;
+		margin-right:2%;
+		float:left;
+	}
+
+	/* == form styles*/
+	/* radio/checkbox lists switch to 2-columns*/
+	.choice-list li{
+		width: 48%;
+		float:left;
+		margin-right:2%;
+	}
+
+	/*
+	==aside styles
+	*/
+
+	/* Tiny Nav goes away, list returns */
+	.tinynav { display: none }
+	
+	aside section{
+		float:left;
+		clear: none;
+	}	
+	aside .product-tour {
+		width: 45%;
+		background-color: transparent;
+		margin-bottom: 2em;
+		padding-left:0;
+		padding-right: 0;
+	}
+	aside .developer-blog{
+		width:55%;
+	}
+	aside .product-tour ul {
+		display: block;
+		list-style-type: none;
+	}
+	aside .product-tour li{		
+		float:none;
+		background: #e4e4e4; /* Old browsers */
+		background: -moz-linear-gradient(top,  #e4e4e4 0%, #dddddd 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4e4e4), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #e4e4e4 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #e4e4e4 0%,#dddddd 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #e4e4e4 0%,#dddddd 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #e4e4e4 0%,#dddddd 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+	}
+	aside .product-tour a{
+		padding:1em;
+		display: block;
+	}
+
+	/* ==footer styles*/
+	#page-footer {
+		clear:both;
+	}
+	#page-footer section{
+		width:50%;
+		float:left;
+	}
+	#page-footer .action{
+		clear:both;
+		width:50%;
+		float:right;
+		margin-right:1em;
+		font-size:.8em;
+	}
+	#page-footer h2{
+		background-color: rgba(0,0,0,.2);
+		padding:.25em;
+		margin-bottom:.25em;
+	}
+}
+/* ==desktop styles*/
+@media only screen and (min-width:800px) {
+
+	body {
+		max-width: 1200px; /* prevent it from getting too wide to read comfortably */
+	}
+	/*header styles*/
+	header {
+		min-height: 96px;
+	}
+	header h1 {		
+		background-position: left top;
+		margin-top:1em;
+	}
+
+
+	/*
+	==mission styles
+	
+	*/
+	.mission {
+		min-height: 200px;
+		background: url(../images/gallery_banner.jpg) no-repeat;
+		background-position: top left;
+		background-size:cover; /* make it stretchy*/
+		background-color:#64384f;
+		padding-top:1px;
+	}
+
+	.mission h1 {
+		padding:0;
+		font-size: 2.2em;
+		color: #fff;
+		text-align: left;
+		letter-spacing:.1em;
+		width: auto;
+		margin:10% 0 2% 60%;
+	}
+	.mission .action{
+		margin:0 0 5% 60%;
+
+	}	
+	/*
+	==basic page layout - float the aside next to the content
+	*/
+	.page-content { /* wider column */
+		float: left; 
+		width: 71%;
+		margin: 3em 2% 0 ;
+	}
+	aside {
+		float: right;
+		width: 25%;
+		padding: 0;
+		margin:0;
+	}
+	/* make the sections of the aside sit one above the other */
+	aside .product-tour, aside .developer-blog{
+		width: 100%;
+		float:none;
+	}
+	#page-footer section{
+		width:33.3333%;
+	}
+	#page-footer .action{
+		width:auto;
+	}
+	/* 
+	== contact page
+	*/
+
+	.mobile-emphasis a{
+		background-color: transparent !important;
+		width: auto;
+		color: #000 !important;
+		display: inline;
+		border: none;
+	}
+	a.action.primary{
+	cursor: default;
+/*	this is to hide the pointer hand in desktops which 
+	cannot correctly link to a phone number without 
+	special circumstances. The absence of a cursor hand makes 
+	desktop users less likely to click the link.*/		
+	}
+
+	/*
+	== form styles
+	*/
+	/* make the radio and check box lists sit horizontally*/
+	.page-content form{
+		font-size:1em;
+	}
+	.action, input[type=submit]{
+		margin:1em 0;
+		width: auto;
+		clear: both;
+		float:none;
+	}
+
+	.choice-list li, .choice-list li label{
+		display: inline-block;
+		width: auto;
+		float: none;
+		clear: none;
+		background-color: transparent;
+	}
+	/* 
+	==gallery styles
+	*/
+	#gallery{
+		width:100%;
+	}
+
+}
+/* ==largest desktop styles*/
+@media only screen and (min-width:1200px) {
+
+	/*
+	== form styles
+	*/
+
+	/*fieldsets - switch to 2 col on wide layout*/
+	#messageInfo{
+		width:60%;
+		float:right;
+		background-color: transparent;
+		padding:3% 0;
+		margin:0 0 1em 0;
+	}
+	#generalInfo{
+		width:34%;
+		float:left;
+		margin: 0 0 1em 0;
+		padding:3%;
+	}
+	#contact-form input[type=submit]{
+		margin-left:40%;
+	} 
+	#contact-form textarea{
+		min-height: 10em;
+	}
+
+	/* == gallery styles */
+	.image-box{
+		width:31%;
+	}
+	
+
+
+}

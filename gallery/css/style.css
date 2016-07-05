@@ -1,0 +1,18 @@
+
+html {
+	margin: 0;
+	padding: 0;
+}
+#container {
+	width: 960px;
+	margin: 0 auto;
+	padding-top:50px;
+	padding-bottom:50px;
+	background-color: #40485B;
+}
+
+
+.galleria {
+	margin: 0 auto;
+
+}

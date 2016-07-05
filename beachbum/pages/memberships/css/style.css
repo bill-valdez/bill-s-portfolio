@@ -1,0 +1,447 @@
+body {
+  position: absolute;
+  left:100px;
+
+}
+h1 {
+  text-indent: -9999px;
+}
+
+nav ul {
+  background:#00bcdf;
+  width: 860px; 
+  height: 40px;
+  padding: 0px 30px; 
+  position: absolute;
+  top: 151px;
+  left: 80px;
+  z-index: 12;
+ 
+}
+nav ul li {
+  display: inline;
+}
+#container {
+
+  width:1090px;
+  margin: 0 auto;
+  position: relative; 
+  min-height: 1100px;
+  padding-bottom: 25px;
+}
+  
+
+.hele {
+ 
+  position: absolute;
+  left: 170px;
+  top: 10px;
+  z-index: 10;
+}
+.dede {
+  position: absolute;
+  left: 840px;
+  top: 268px;
+  z-index: 50;
+}
+.orbitzp {
+  position: absolute;
+  left: 820px;
+  top: 490px;
+  width: 178px;
+  height: 148px;
+  z-index: 40;
+}
+.background_png32_background_jpg10_background_gif {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 960px;
+  height: 832px;
+  z-index: 2;
+}
+.main_box {
+  position: absolute;
+  left: 50px;
+  top: 112px;
+  z-index: 3;
+}
+.sandback {
+  position: absolute;
+  left: 130px;
+  top: 50px;
+  z-index: 4;
+}
+
+.gold {
+  position: absolute;
+  left: 500px;
+  top: 465px;
+  z-index: 5;
+}
+.black {
+  position: absolute;
+  left: 310px;
+  top: 275px;
+  z-index: 6;
+}
+
+
+.aside_box {
+  position: absolute;
+  left: 806px;
+  top: 240px;
+  width: 205px;
+  height: 449px;
+  z-index: 4;
+}
+
+.home_hover {
+  position: absolute;
+  left: 74px;
+  top: 195px;
+  width: 200px;
+  height: 38px;
+  z-index: 13;
+}
+.memberships_hover {
+  position: absolute;
+  left:668px;
+  top: 204px;
+  z-index: 40;
+}
+.login_box {
+   position: absolute;
+  left: 150px;
+  top: 10px;
+  width: 878px;
+  height: 43px;
+  z-index: 29;
+}
+.logo_eclipse {
+  position: absolute;
+  left:10px;
+  top: 10.5px;
+  width: 180px;
+  height: 213px;
+  z-index: 30;
+}
+.ul_box ul {
+    font-size: 18px;
+     font-weight: bold;
+  font-family: “Microsoft Sans Serif”;
+  color: rgb( 0, 0, 0 );
+  line-height:2.286;
+  text-align: left;
+  -moz-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -webkit-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -ms-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  position: absolute;
+  left: 40px;
+  top:190px;
+
+  z-index:5;
+}
+.ul_box {
+  position: absolute;
+  left: 59px;
+  top: 233px;
+  width: 214px;
+  height: 441px;
+  z-index:5;
+}
+
+
+.footer_box {
+  position: absolute;
+  left: 59px;
+  top: 672px;
+  width: 963px;
+  height: 162px;
+  z-index: 5;
+}
+.footer_box ul{
+     font-size: 18px;
+     font-weight: bold;
+  font-family: “Microsoft Sans Serif”;
+  color: rgb( 0, 0, 0 );
+  line-height:2.286;
+  text-align: left;
+  -moz-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -webkit-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -ms-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  position: absolute;
+  left:140px;
+  top: 20px;
+  z-index: 40;
+}
+.footsec2 ul{
+     font-size: 18px;
+     font-weight: bold;
+  font-family: “Microsoft Sans Serif”;
+  color: rgb( 0, 0, 0 );
+  line-height:2.286;
+  text-align: left;
+  -moz-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -webkit-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -ms-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  position: absolute;
+  left:340px;
+  top: 20px;
+  z-index: 40;
+}
+.footsec3 ul{
+     font-size: 18px;
+     font-weight: bold;
+  font-family: “Microsoft Sans Serif”;
+  color: rgb( 0, 0, 0 );
+  line-height:2.286;
+  text-align: left;
+  -moz-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -webkit-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -ms-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  position: absolute;
+  left:540px;
+  top: 20px;
+  z-index: 40;
+}
+.footsec4{
+   position: absolute;
+  left:800px;
+  top: 30px;
+  z-index: 40;
+}
+
+.app_button_copy {
+  position: absolute;
+  left: 65px;
+  top: 349px;
+  width: 164px;
+  height: 38px;
+  z-index: 22;
+}
+.app_button_copy_2 {
+  position: absolute;
+  left: 72px;
+  top: 283px;
+  width: 164px;
+  height: 38px;
+  z-index: 23;
+}
+.Buy_Now {
+  font-size: 31.051px;
+  font-family: “Myriad Pro”;
+  color: rgb( 2, 2, 2 );
+  font-weight: bold;
+  text-align: center;
+  -moz-transform: matrix( 0.78709793228438,0,0,0.78709793228438,0,0);
+  -webkit-transform: matrix( 0.78709793228438,0,0,0.78709793228438,0,0);
+  -ms-transform: matrix( 0.78709793228438,0,0,0.78709793228438,0,0);
+  position: absolute;
+  left: 85px;
+  top: 351.424px;
+  z-index: 24;
+}
+.Get__APP {
+  font-size: 31.051px;
+  font-family: “Myriad Pro”;
+  color: rgb( 2, 2, 2 );
+  font-weight: bold;
+  text-align: center;
+  -moz-transform: matrix( 0.78709793228438,0,0,0.78709793228438,0,0);
+  -webkit-transform: matrix( 0.78709793228438,0,0,0.78709793228438,0,0);
+  -ms-transform: matrix( 0.78709793228438,0,0,0.78709793228438,0,0);
+  position: absolute;
+  left: 85px;
+  top: 288.01px;
+  z-index: 25;
+}
+
+
+.Home {
+  font-size: 25.333px;
+  font-family: “Myriad Pro”;
+  color: rgb( 254, 253, 253 );
+  font-weight: bold;
+  text-align: left;
+  -moz-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -webkit-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -ms-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  position: absolute;
+  left: 70px;
+  top: 204px;
+  z-index: 28;
+}
+.Homehover {
+  font-size: 25.333px;
+  font-family: “Myriad Pro”;
+  color: rgb( 254, 253, 253 );
+  font-weight: bold;
+  text-align: left;
+  -moz-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -webkit-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -ms-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  position: absolute;
+  left: 70px;
+  top: 204px;
+  z-index: 29;
+}
+.nav_event_about {
+  font-size: 20px;
+  font-family: “Microsoft Sans Serif”;
+  color: rgb( 2, 2, 2 );
+  text-align: left;
+  -moz-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -webkit-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -ms-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  position: absolute;
+  left: 288px;
+  top: 204.342px;
+  z-index: 30;
+}
+.nav_event_rentals {
+  font-size: 20px;
+  font-family: “Microsoft Sans Serif”;
+  color: rgb( 2, 2, 2 );
+  text-align: left;
+  -moz-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -webkit-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -ms-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  position: absolute;
+  left: 400px;
+  top: 204.342px;
+  z-index: 31;
+}
+.nav_event_membership {
+  font-size: 20px;
+  font-family: “Microsoft Sans Serif”;
+  color: rgb( 2, 2, 2 );
+  text-align: left;
+  -moz-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -webkit-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -ms-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  position: absolute;
+  left: 663px;
+  top: 203.342px;
+  z-index: 32;
+}
+.nav_event_planning {
+  font-size: 20px;
+  font-family: “Microsoft Sans Serif”;
+  color: rgb( 2, 2, 2 );
+  text-align: left;
+  -moz-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -webkit-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -ms-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  position: absolute;
+  left: 830px;
+  top: 203.342px;
+  z-index: 40;
+}
+.left_li {
+  font-size: 15px;
+  font-family: “Microsoft Sans Serif”;
+  color: rgb( 4, 117, 222 );
+  line-height: 2.4;
+  text-align: left;
+  -moz-transform: matrix( 1.10718961285001,0,0,1.10718961285001,0,0);
+  -webkit-transform: matrix( 1.10718961285001,0,0,1.10718961285001,0,0);
+  -ms-transform: matrix( 1.10718961285001,0,0,1.10718961285001,0,0);
+  position: absolute;
+  left: 99.007px;
+  top: 450.131px;
+  z-index: 34;
+}
+.footer_third_colum {
+  font-size: 15px;
+  font-family: “Microsoft Sans Serif”;
+  color: rgb( 253, 253, 253 );
+  line-height: 2.4;
+  text-align: left;
+  -moz-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -webkit-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -ms-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  position: absolute;
+  left: 645.016px;
+  top: 738.132px;
+  width: 82.629px;
+  height: 83px;
+  z-index: 35;
+}
+.footer_second_colum {
+  font-size: 15px;
+  font-family: “Microsoft Sans Serif”;
+  color: rgb( 250, 251, 251 );
+  line-height: 2.4;
+  text-align: left;
+  -moz-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -webkit-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -ms-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  position: absolute;
+  left: 395.38px;
+  top: 738.632px;
+  width: 143.179px;
+  height: 83px;
+  z-index: 36;
+}
+.footer_first_colum {
+  font-size: 15px;
+  font-family: “Microsoft Sans Serif”;
+  color: rgb( 254, 254, 254 );
+  line-height: 2.4;
+  text-align: left;
+  -moz-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -webkit-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  -ms-transform: matrix( 0.9375,0,0,0.9375,0,0);
+  position: absolute;
+  left: 142.476px;
+  top: 703.632px;
+  width: 152.049px;
+  height: 86px;
+  z-index: 37;
+}
+.facebook_logo {
+  background-image: url(“facebook_logo.png”);
+  position: absolute;
+  left: 824px;
+  top: 723px;
+  width: 121px;
+  height: 54px;
+  z-index: 38;
+}
+.Contact_Us {
+  font-size: 20px;
+  font-family: “Microsoft Sans Serif”;
+  color: rgb( 2, 2, 2 );
+  text-align: left;
+  position: absolute;
+  left: 530px;
+  top: 203.842px;
+  z-index: 39;
+}
+.orbitz {
+  background-image: url(“orbitzp.png”);
+  position: absolute;
+  left: 820px;
+  top: 490px;
+  width: 178px;
+  height: 148px;
+  z-index: 40;
+}
+.cf:before,
+.cf:after {
+  content: "";
+  display: block; 
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1; /* for old ie - triger has layout - ie sucks it */
+}
+.clear {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}

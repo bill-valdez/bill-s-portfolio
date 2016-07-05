@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>The Hunt</title>
+<!-- Final Project William Valdez -->
+	<style>
+html,body{
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	height: auto;
+}
+	#startscreen{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width:100%;
+		height: 800px;
+			background-image:url(images/startpage.png);
+		z-index: 100; 
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color:black; 
+	}
+
+
+	#start{
+		top: 500px;
+		margin: 0 auto;
+		margin-top: 550px;
+		width: 150px;
+		height: 150px;
+		background-image:url(images/roundbtn.png);
+
+	}
+#bgcontainer{
+	width:100%;
+	height:auto;
+	background-image:url(images/gamebackground.png);
+	background-position:0px 0px;
+	position: relative;
+		
+}
+#bgcontainerseaweed{
+		width:100%;
+		height: 800px;
+		background-image:url(images/seaweedbkgnd.png);
+		background-position:0px 0px;
+		position: relative;
+		z-index: 50;
+	}
+
+#gooddiver{
+	width:300px;
+	height:204px;
+	background-image:url(images/diversprite3.png);
+	position: absolute;
+	top: 400px;
+	left: 90px;
+	position: absolute;
+ }
+  .mirmaid{
+	width:200px;
+	height:143px;
+	background-image:url(images/mirmaidsprite.png);
+	position: absolute;
+
+ }
+
+ .shark{
+	width:400px;
+	height:161px;
+	background-image:url(images/sharksprite.png);
+	position: absolute;
+
+ }
+
+  .eshark{
+	width:400px;
+	height:161px;
+	background-image:url(images/hitshark.png);
+	position: absolute;
+
+ }
+  .sailfish{
+	width:266px;
+	height:176px;
+	background-image:url(images/sailfishsprite.png);
+	position: absolute;
+
+ }
+  .baddiver{
+	width:320px;
+	height:320px;
+	background-image:url(images/baddiversprite.png);
+	position: absolute;
+	
+ }
+
+   .ebaddiver{
+	width:320px;
+	height:320px;
+	background-image:url(images/hitbaddiverc.png);
+	position: absolute;
+	
+ }
+ .noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+}
+
+#shielddown{
+	width:300px;
+	height:204px;
+	position: absolute;
+	background-image:url(images/shielddown6.png);
+	top: 400px;
+	left: 90px;
+}
+#score{
+	width:90px;
+	height:80px;
+	top: 40px;
+	left: 30px;
+	padding-top: 5px;
+	background-image:url(images/scorebk.png);
+	border-radius: 10%;
+	position:absolute;
+	color:white;
+	font-size: 30px;
+	text-align: center;
+	z-index: 80;
+}
+
+
+#lives{
+	width:90px;
+	height:80px;
+	position: absolute;
+	top: 140px;
+	left: 30px;
+	padding-top: 5px;
+	background-image:url(images/scorebk.png);
+	border-radius: 10%;
+	color:white;
+	font-size: 30px;
+	text-align: center;
+	z-index: 60;
+}
+
+ .enemy{
+ 	width: 50px;
+ 	height: 50px;
+ 	background-image:url(images/mine.png);
+ 	position: absolute;
+ 	top: 100px;
+ 	left: 100px; 
+ }
+
+ .eenemy{
+ 	width: 150px;
+ 	height:113px;
+ 	background-image:url(images/exploding.png);
+ 	position: absolute;
+ 	top: 100px;
+ 	left: 100px; 
+ }
+ .bullet{
+ 	width: 100px;
+	height: 13px;
+	background-image:url(images/spear.png);
+	position: absolute;
+	top: 100px;
+	left: 100px; 
+ }
+  .badbullet{
+ 	width: 100px;
+	height: 13px;
+	background-image:url(images/bspear.png);
+	position: absolute;
+	top: 100px;
+	left: 100px; 
+ }
+
+ 
+
+.explodecontainer{
+	position: absolute;
+	top: 70px;
+	left: 70px; 
+
+}
+
+.explodecharacter{
+position: absolute;
+top: 70px;
+left: 70px; 
+color:orange;
+font-size: 20px;
+} 
+
+   .particle {
+        width:6%;
+        height:6%;
+       	background-image:url(images/particles.png);
+        }
+
+        .tresshark{
+        	width:73px;
+        	height:80px;
+       		background-image:url(images/treasurechest.png);
+       		position: absolute;
+        }
+           .goldbdvr{
+        	width:66px;
+        	height:47px;
+       		background-image:url(images/goldbar.png);
+       		position: absolute;
+        }
+
+ 	      .pearl{
+        	width:58px;
+        	height:60px;
+       		background-image:url(images/pearl.png);
+       		position: absolute;
+        }
+
+
+	#endgame{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width:100%;
+		height: 800px;
+		background-image:url(images/endpage.png);
+		z-index: 100; 
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color:black; 
+		display: none;
+	}
+	#endscore{
+		position: relative;
+		width: 150px;
+		height: 100px;
+		top: 425px;
+		margin: 0 auto;
+		background-image:url(images/score.png);
+		color:white;
+		font-size: 50px;
+		padding-top: 50px;
+		text-align: center;
+
+	}
+
+	#restart{
+		position: relative;
+		width: 150px;
+		height: 150px;
+		top: 450px;
+		background-image:url(images/restart.png);
+		margin: 0 auto;
+
+	}
+
+
+	</style>
+
+</head>
+	<body>
+
+<div id="bgcontainer" style="background-position: -7932px 0px;">	
+	<div id="startscreen">
+		
+		<div id="start"></div>
+	</div>
+		<div id='gooddiver' class="noselect">
+		<img src="images/shielddown6.png">
+		</div>
+		<div id="bgcontainerseaweed" class="noselect" style="background-position: -7932px 0px;"></div>
+	
+		<div id='lives' class="noselect">Lives</div>
+
+		<div id='score' class="noselect">Score</div>
+
+<div id="endgame">
+		<div id="endscore"></div>
+		<div id="restart"></div>
+
+	</div>
+		<!-- <div id='finalscore' class="noselect">Score</div> -->
+</div>
+	
+
+ <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script src="spritely/jquery.spritely.js"></script>
+  
+<script>
+
+  //add click event to start the game
+  $('#start').click(function() {
+
+  	//hide startgame div
+  	$('#startscreen').fadeOut(),500;
+
+  	//startgame
+  	startgame();
+
+  });
+function startgame(){
+gamerunning=true;	
+setInterval(createenemy,7500);
+setInterval(baddiver,5000);
+setInterval(shark,20000);
+setInterval(mirmaid,30000);
+setInterval(sailfish,20000);
+ setInterval(bgscroll,30);
+  setInterval(bgscrollw,20);
+$('#gooddiver').sprite({fps:3, no_of_frames:3});
+setInterval(shipmove, 10);
+	 pop1.play();//jaws music
+$(document).click(function(e) {
+	pop2.play();//gooddiver hit impact
+	pop4.play();//gooddiver shoosh
+//create a new div and add the class bullet
+var bullet=$('<div>').addClass('bullet');
+
+//--------------------------------------------------------------
+//give bullet starting coordinates (where the ship is)
+var shiptop=$('#gooddiver').position().top+105;
+var shipleft=$('#gooddiver').position().left+280;
+
+bullet.css({top:shiptop,left:shipleft});
+
+//add bullet to body
+$('body').append(bullet);
+
+//animate the bullet to the ckick event coordinates
+bullet.animate({
+	left:e.pageX,
+	top:e.pageY
+},300,function() {
+		//this function runs when the animation is finished
+		createexplosion($(this));
+	});
+});//end click function
+
+}//end function startgame()
+	//start background script
+	var bgpos=0//the position (px)of the background image
+ 	 function bgscroll(){
+
+ 	bgpos-=2;
+  	//put bgpos into the background-position property
+ 	 $('#bgcontainer').css({
+  		'background-position': bgpos+'px 0px'
+  });
+  }//end bgscroll() 
+
+//-----------------seaweed start scroll-------//
+  var bgposw=0//the position (px)of the background image
+ 	 function bgscrollw(){
+
+ 	bgposw-=2;
+  	//put bgpos into the background-position property
+ 	$('#bgcontainerseaweed').css({
+  		'background-position': bgposw+'px 0px'
+  });
+  }
+//------------------seaweed end scroll-------------//
+
+
+  //setup movement for ship based on arrow keys (or wasd)
+  var dir={
+  		up:false,
+  		down:false,
+  		left:false,
+  		right:false
+  }; //you can access these values like this;
+  //dir.up
+  //dir.left
+  //etc.
+
+
+//global variables
+  var score=0;//how many enemies have been killed
+  var lives=30;//how many lives we have left
+  var gamerunning=false;
+
+//create the bombs
+function createenemy(){
+//creates enemies for the page
+//create new div, addClass enemy
+if(gamerunning==true){
+ 
+var enemy=$('<div>').addClass('enemy');
+enemy.data('health', 1);
+//give starting coordinates(top of browser)
+enemy.css({
+	top:-60,
+	left:Math.random()*$(window).width()
+});
+//append it to body
+$('body').append(enemy);
+//animate it to the bottom of the browser
+enemy.animate({
+	top:$(window).height()+400},9000,
+	function() {
+	$(this).remove();
+});
+}
+}//end create the bombs
+
+
+  $(document).keydown(function(e) {
+//up38
+if(e.keyCode==38){
+	// $('#gooddiver').animate({top: '-=50'} ,100);
+dir.up=true;
+}
+//down40
+if(e.keyCode==40){
+	// $('#gooddiver').animate({top: '+=50'} ,100);
+	dir.down=true;
+}
+//left37
+if(e.keyCode==37){
+	// $('#gooddiver').animate({left: '-=50'} ,100);
+	dir.left=true;
+}
+//right39
+if(e.keyCode==39){
+	// $('#gooddiver').animate({left: '+=50'} ,100);
+	dir.right=true;
+}
+  });//end keydown function
+
+
+$(document).keyup(function(e) {
+	if(e.keyCode==38){//up
+		dir.up=false;
+	}
+	if(e.keyCode==40){//down
+		dir.down=false;
+	}
+	if(e.keyCode==37){//left
+		dir.left=false;
+	}
+	if(e.keyCode==39){//right
+		dir.right=false;
+	}
+});
+
+function shipmove(){
+//move the ship in the active direction by ~2px
+var addleft=0;//how much should be added/subtracted to the ship
+var addtop=0;
+if (dir.up==true) {
+	addtop-=4;
+}
+if (dir.down==true) {
+	addtop+=4;
+}
+if (dir.left==true) {
+	addleft-=4;
+}
+if (dir.right==true) {
+	addleft+=4;
+}
+
+var divrtop=$('#gooddiver').position().top+0;
+var divrleft=$('#gooddiver').position().left+0;
+	if (divrtop+addtop<600 && 
+		divrtop+addtop>0 && 
+		divrleft+addleft>0 && 
+		divrleft+addleft < $('#bgcontainer').width()-300){
+
+		$('#gooddiver').css({top:'+='+addtop, left:'+='+addleft});
+	}
+	
+
+
+
+
+
+
+
+//this is for the baddivers shooting
+	$('.baddiver').each(function() {
+	if (Math.random()>.99) {
+		pop3.play();//bdddivers bullets
+				//create a new div and add the class bullet
+			var bullet=$('<div>').addClass('badbullet');
+
+		//give bullet starting coordinates (where the ship is)
+		var shiptop=$(this).position().top+200;
+		var shipleft=$(this).position().left+0;
+		bullet.css({top:shiptop,left:shipleft});
+		//add bullet to body
+		$('#bgcontainer').append(bullet);
+		//animate the bullet to the ckick event coordinates
+		bullet.animate({
+			left:-330
+		},1000,function() {
+			});
+		};
+	})//end of the baddivers shooting
+
+
+//gooddiver moves
+
+
+
+
+//run hit detect on #gooddiver vs .enemy
+$('.enemy').each(function() {
+if (circlehit('#gooddiver', $(this))) {
+	
+	//remove enemy that we collided with
+	$(this).remove();
+	//we got hit,subtract a life
+	lives--;
+	$('#lives').html('Lives '+lives);
+	//check for 0 lives game over
+	if (lives<=0) {
+		gameover()
+	}
+}
+});//end gooddiver moves
+
+//run hit detect on #gooddiver vs treasurechest
+$('.tresshark').each(function() {
+
+if (circlehit('#gooddiver', $(this))) {
+pop9.play();//bling
+	//remove enemy that we collided with
+	$(this).remove();
+	//we got hit,subtract a life
+	score+=10;
+	$('#score').html('Score '+score);
+	//check for 0 lives game over
+}
+});//end gooddiver moves
+
+//goldbar
+//run hit detect on #gooddiver vs goldbar
+$('.goldbdvr').each(function() {
+
+if (circlehit('#gooddiver', $(this))) {
+pop9.play();//cash in
+	//remove enemy that we collided with
+	$(this).remove();
+	//we got hit,subtract a life
+	score+=5;
+	$('#score').html('Score '+score);
+	//check for 0 lives game over
+}
+});
+
+
+//pearl
+//run hit detect on #gooddiver vs goldbar
+$('.pearl').each(function() {
+
+if (circlehit('#gooddiver', $(this))) {
+	pop9.play();//pearl
+	//remove enemy that we collided with
+	$(this).remove();
+	//we got hit,subtract a life
+	score+=2;
+	$('#score').html('Score '+score);
+}
+});
+
+
+//run hit detect on .baddiver vs #gooddiver
+$('.badbullet').each(function() {
+if (circlehit('#gooddiver', $(this))) {
+	
+	pop8.play();//gooddiver ouch
+	//remove enemy that we collided with
+	$(this).remove();
+	//we got hit,subtract a life
+	lives--;
+	$('#lives').html('Lives '+lives);
+	//check for 0 lives game over
+	if (lives<=0) {
+		//game over
+	
+		gameover()
+
+	}
+}
+});//end #gooddiver each
+
+//run hit detect on .enemy and .bullet
+$('.enemy').each(function() {
+var save_enemy=$(this);//save the enemy reference
+$('.bullet').each(function() {
+	if(circlehit(save_enemy, $(this))){
+		var htmine=$('<div>').addClass('eenemy');
+
+
+		  var yClick =save_enemy.position().top+57; 
+			 	 var xClick =save_enemy.position().left+75;
+                  $("body").explosion({
+                      origin:{
+                        x:xClick,
+                        y:yClick
+                    },
+                    particleClass:"particle"
+                });
+                   var prlbm=$('<div>').addClass('pearl');
+                 prlbm.css({
+                 	top:yClick,
+			 	 	left:xClick
+                 })
+                 prlbm.appendTo('body').animate({top:'+=800'},6000,function() {
+
+                 	$(this).remove();
+                 });
+
+              
+
+			//apply inital position for the eenemy graphic
+			 htmine.css({
+			 	top:save_enemy.position().top, 
+			 	 left:save_enemy.position().left 
+			 });
+
+			$('#bgcontainer').append(htmine);
+			htmine.fadeOut(500);
+
+		pop7.play();//bomb explosion
+
+		$(this).remove();//removes bullet
+		//subtract 1 from enemy health
+		var ehealth=save_enemy.data('health');
+			ehealth--;
+			save_enemy.data('health',ehealth);
+		if (ehealth<=0) {
+			save_enemy.remove();
+				//we shot down a ship, add 1 to score
+		score++;
+		$('#score').html('Score '+score);
+		}
+		//end ehealth if	
+	}
+});//end bullet each
+});//end .enemy each
+//end bad diver hit
+
+// start baddiver hit
+$('.baddiver').each(function() {
+var save_enemy=$(this);//save the enemy reference
+$('.bullet').each(function() {
+	if(circlehit(save_enemy, $(this))){
+			var bddiver=$('<div>').addClass('ebaddiver');
+
+
+                 var yClick =save_enemy.position().top+200; 
+			 	 var xClick =save_enemy.position().left+130;
+                  $("body").explosion({
+                      origin:{
+                        x:xClick,
+                        y:yClick
+                    },
+                    particleClass:"particle"
+                });
+                    var gldbr=$('<div>').addClass('goldbdvr');
+                 gldbr.css({
+                 	top:yClick,
+			 	 	left:xClick
+                 })
+                 gldbr.appendTo('body').animate({left:-90},3000)
+               
+			//apply inital position for the ebaddiver graphic
+			 bddiver.css({
+			 	top:save_enemy.position().top, 
+			 	 left:save_enemy.position().left 
+			 });
+			$('#bgcontainer').append(bddiver);
+			bddiver.fadeOut(500);
+			pop5.play();//baddiver dying
+		$(this).remove();//removes bullet
+			save_enemy.remove();
+		score++;
+		$('#score').html('Score '+score);
+	}//end bad diver hit
+});//end bullet each
+});//end .enemy each
+
+
+// start shark hit
+$('.shark').each(function() {
+var save_enemy=$(this);//save the enemy reference
+$('.bullet').each(function() {
+	if(circlehit(save_enemy, $(this))){
+		var htshark=$('<div>').addClass('eshark');
+
+                 var yClick =save_enemy.position().top+80; 
+			 	 var xClick =save_enemy.position().left+140;
+                  $("body").explosion({
+                      origin:{
+                        x:xClick,
+                        y:yClick
+                    },
+                    particleClass:"particle"
+
+                });
+                
+                 var trshark=$('<div>').addClass('tresshark');
+                 trshark.css({
+                 	top:yClick,
+			 	 	left:xClick
+                 })
+                 trshark.appendTo('body').animate({left:-150},3000)
+                  // alert('num2');
+
+		//apply inital position for the ebaddiver graphic
+			 htshark.css({
+			 	top:save_enemy.position().top, 
+			 	 left:save_enemy.position().left 
+			 });
+			 $('#bgcontainer').append(htshark);
+			htshark.fadeOut(500);
+			pop6.play();//shark dying
+		$(this).remove();
+			save_enemy.remove();
+		score++;
+		$('#score').html('Score '+score);		
+	}//end shark hit
+});//end bullet each
+});//end .enemy each
+}//end shipmove()
+
+
+//gameover()
+	function gameover(){
+		 gamerunning=false
+		 pop1.pause();
+		 pop2.pause();
+		 pop3.pause();
+		 pop4.pause();
+		 pop5.pause();
+		 pop6.pause();
+		 pop7.pause();
+		 pop8.pause();
+		 pop9.pause();//cash in
+			$('#endgame').fadeIn(500);
+			$('#endscore').html(score);
+			$('#restart').click(function() {
+
+				location.reload()
+			});
+	}
+
+//create baddiver 
+function baddiver(){
+	if(gamerunning==true){
+	//create new div of baddiver
+	var bddiver=$('<div>').addClass('baddiver');
+	//add starting location(right side of screen)
+	bddiver.css({
+		left:$('#bgcontainer').width(),
+		top:Math.random()*($('#bgcontainer').height()-320)
+	})
+	//add the diver to the page
+	$('#bgcontainer').append(bddiver);
+	//run the sprite on the baddiver
+	bddiver.sprite({fps:4, no_of_frames:3});
+	//animate the diver to the left side of the screen
+	bddiver.animate({left:-350},6900,function() {
+		$(this).remove();
+	});
+}
+	
+}
+
+// end baddiver();
+
+
+//start shark
+function shark(){
+	//create new div of shark
+	var jaws=$('<div>').addClass('shark');
+	//add starting location(right side of screen)
+	jaws.css({
+		left:$('#bgcontainer').width(),
+		top:Math.random()*($('#bgcontainer').height()-161)
+	})
+	//add the shark to the page
+	$('#bgcontainer').append(jaws);
+	//run the sprite on the jaws
+	jaws.sprite({fps:4, no_of_frames:3});
+	//animate the shark to the left side of the screen
+	jaws.animate({left:-400},5600,function() {
+		$(this).remove();
+	});
+}
+// end shark();
+
+
+//start mirmaid
+function mirmaid(){
+	//create new div of mirmaid
+	var mrmd=$('<div>').addClass('mirmaid');
+	//add starting location(right side of screen)
+	mrmd.css({
+		left:$('#bgcontainer').width(),
+		top:Math.random()*($('#bgcontainer').height()-143)
+	})
+	//add the mirmaid to the page
+	$('#bgcontainer').append(mrmd);
+	//run the sprite on the jaws
+	mrmd.sprite({fps:4, no_of_frames:3});
+	//animate the mirmaid to the left side of the screen
+	mrmd.animate({left:-200},10500,function() {
+		$(this).remove();
+	});
+}
+// end mirmaid();
+
+
+//start sailfish
+function sailfish(){
+	//create new div of sailfish
+	var slfh=$('<div>').addClass('sailfish');
+	//add starting location(right side of screen)
+	slfh.css({
+		right:$('#bgcontainer').width(),
+		top:Math.random()*($('#bgcontainer').height()-176)
+	})
+	//add the sailfish to the page
+	$('#bgcontainer').append(slfh);
+	//run the sprite on the sailfish
+	slfh.sprite({fps:4, no_of_frames:3});
+	//animate the sailfish to the left side of the screen
+	slfh.animate({right:-266},8500,function() {
+		$(this).remove();
+	});
+}
+// end sailfish();
+
+
+function createexplosion(bullet){
+//bullet=$(this)
+// create a new div with class explodecontainer
+var explode=$('<div>').addClass('explodecontainer');
+explode.css({
+	top:bullet.position().top,
+	left:bullet.position().left,
+});
+ bullet.remove();//removes bullet from page
+// append explodecontainer to body
+$('body').append(explode);
+
+// create explodecontainer divs and append into explodecontainer
+for(var i=0; i<30; i++){
+var expchar=$('<div>').addClass('explodecharacter');
+expchar.html('O');
+explode.append(expchar);
+expchar.animate({
+
+	top:(Math.random()*300)-100,
+	left:(Math.random()*300)-100
+},300);
+}// }end for loop
+
+// animate explodecharacters outwards in radial directions
+explode.fadeOut(400,function() {
+
+//animation complete
+//remove this explodecontainer
+$(this).remove();
+});
+}//end create explosion
+
+
+  function circlehit(circle1, circle2){
+var c1=$(circle1);
+var c2=$(circle2);
+
+
+	c1.r=c1.width()/2;//radius
+	c1.x=c1.position().left+c1.r;
+	c1.y=c1.position().top+c1.r;
+
+	c2.r=c2.width()/2;//radius
+	c2.x=c2.position().left+c2.r;
+	c2.y=c2.position().top+c2.r;
+
+	
+	var distx=c1.x-c2.x;
+	var disty=c1.y-c2.y;
+
+	var squaredist=(distx*distx)+(disty*disty);
+	return squaredist<=(c1.r+c2.r)*(c1.r+c2.r);
+  }//end circlehit()  
+
+//start audio
+    var pop1=new Audio('jaws.mp3');
+  	//play an audio file
+ 
+	$().click(function() {
+	});
+	    var pop2=new Audio('swoosh.mp3');
+	    var pop3=new Audio('bswoosh.mp3');
+	    var pop4=new Audio('beinghit.mp3');
+  		var pop5=new Audio('dying.mp3');
+  		var pop6=new Audio('hitshark.mp3');
+  		var pop7=new Audio('bomb.mp3');
+  		var pop8=new Audio('goodhit.mp3');
+  		var pop9=new Audio('bling.mp3');
+
+
+	</script>
+
+
+	 <script type="text/javascript">
+    //start of paritcle explosion-------------//
+        
+    
+        (function($){
+    
+            $.fn.explosion = function(options){
+                
+                var settings = $.extend({                  
+                        particleClass: "particle",
+                        origin: {x:0,y:0},
+                        particles: 32,
+                        radius: 360,
+                        complete: function() {}
+                    },options);
+                return this.each(function() {    
+                    for(i=0;i<settings.particles;i++){
+                        var particle = $("<div />").addClass(settings.particleClass);
+                        $(particle).css("position","absolute");
+                        $(this).append($(particle));
+                          $(particle).offset({
+                             top:settings.origin.y-$(particle).height()/2,
+                            left:settings.origin.x-$(particle).width()/2
+                        });
+                        $(particle).animate(
+                            {
+                                "margin-top": (Math.floor(Math.random()*settings.radius)-settings.radius/2)+"px",
+                                "margin-left": (Math.floor(Math.random()*settings.radius)-settings.radius/2)+"px",
+                                "opacity": 0
+                            },
+                            {
+                                "duration": Math.floor(Math.random()*1000)+300,
+                                "complete": function (){
+                                    $(this).remove();
+                                }
+                            }
+                        );
+                    }
+                        settings.complete.call(this);
+                    });
+                    
+            };
+        }(jQuery));//end of partical explosion----------//
+    </script>
+
+	</body>
+</html>

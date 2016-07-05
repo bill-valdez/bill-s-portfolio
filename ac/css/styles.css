@@ -1,0 +1,383 @@
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table; 
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+.cf {
+    *zoom: 1;
+}
+
+img{
+	max-width:100%;
+	height: auto;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+ html{
+ background-color:#8dbf67; 
+
+ }
+  html.bermuda{
+ background-color:#8dbf67; 
+
+ }
+
+
+body{
+	font-size: 18px;
+	background-color: #5d9dcd; 
+	width:100%;
+	max-width:1200px;
+	min-width: 300px;
+	margin: 0 auto;
+	font-family:"Arvo", serif;
+	position:relative;
+}
+body.bermudab{
+	font-size: 18px;
+	background-color: #5d9dcd; 
+	width:100%;
+	max-width:1200px;
+	min-width: 300px;
+	margin: 0 auto;
+	font-family:"Arvo", serif;
+	position:relative;
+}
+body.sandiegob{
+	font-size: 18px;
+	background-color: #5d9dcd; 
+	width:100%;
+	max-width:1200px;
+	min-width: 300px;
+	margin: 0 auto;
+	font-family:"Arvo", serif;
+	position:relative;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+	font-family: "Josefin Slab", serif;
+}
+h2, h3{
+	font-family: sans-serif;
+	font-size: 1.3em;
+	font-weight: bold;
+
+}
+
+a{
+	text-decoration: none;
+}
+
+#mainNav ul{
+	padding: 0;
+}
+
+#mainNav li a{
+	background-color: #00668d;
+	color: white;
+	display: block;
+	margin: .5em .25em;
+	padding: 1.25em;
+	text-align: center;
+}
+
+#mainNav li a:hover{
+	background-color: #1ac3a8;
+	color: #000;
+}
+#mainNav li a:active{
+	background-color: #000;
+	color: #fff;
+}
+
+li.toTop{
+	font-size: 0.85em;
+	font-style: bold;
+	text-align: center;	
+}
+li.toTop a{
+	padding: 0.65em 0;
+}
+
+#mainHead{
+	background-color:#000; 
+}
+#mainHead.sandiego{
+	background-color:#8dbf67; 
+}
+
+#menu{
+	width: 100%;
+	clear:both;
+	padding-left: 0em;
+}
+
+nav h3 a{
+	color: #fff;
+	text-decoration: none;
+}
+
+nav h3 a:hover{
+	color: #ffd904;
+}
+
+
+#mainHead h1{
+	color:white;
+	width: 100%;
+	text-align: center;
+	padding-top:1em;
+	margin: 0;
+	padding-bottom: .5em;
+}
+
+
+
+main{
+	background-color: #23a38f;
+	padding: 2em 1em;
+	line-height: 1.5em;
+}
+aside.aside{
+	background-color:#b7c11e; 
+	padding: 1em .5em;
+		padding: 2em;
+}
+aside.aside ul li{
+	list-style: none;
+}
+
+
+
+main.sandiego{
+	background-color: #fccb5f;
+	padding: 2em 1em;
+	line-height: 1.5em;
+	padding: 2em;
+}
+
+aside.sandiego{
+	background-color:#8dbf67; 
+	padding: 1em .5em;
+}
+aside.sandiego ul li{
+	list-style: none;
+}
+main.bermuda{
+	background-color: #78d8db;
+padding: 2em 1em;
+	line-height: 1.5em;
+	padding: 2em;
+}
+aside.bermuda{
+	background-color:#137e8e; 
+	padding: 1em .5em;
+}
+aside.bermuda ul li{
+	list-style: none;
+}
+
+main section img{
+	width: 100%;
+	max-width: 600px;
+	float: right;
+
+}
+
+.video{
+	position:relative;
+	padding-bottom: 56.25%;
+	padding-top:25px;
+	height: 0;
+	margin-bottom: 1em;
+	width: 100%;
+
+}
+
+.video iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#pageFoot{
+	background-color: #000;
+	color: white;
+	padding: 1.5em .5em;
+	text-align: center; 
+}label, legend, textarea {
+    display: block;
+    margin: 20px 0 5px;
+}
+
+legend {
+    margin-bottom: 14px;   
+}
+
+fieldset.checkgroup {
+    margin: 10px 0 20px 0;   
+}
+
+fieldset.checkgroup label {
+    display: inline;
+    margin: 0;
+    padding: 0 40px 0 0;
+    color: #000000;
+    font-size: 14px;
+}
+
+input[type="text"], textarea {
+    border: solid 1px #FF6666;
+    width: 100%;
+    padding: 5px;
+    background: #FFFFFF;
+    color: #000;
+}
+
+input[type="submit"] {
+    border: solid 1px #FF6666;
+    width: 100%;
+    padding: 5px;
+    background: #FFFFFF;
+    color: #FF6666;
+  
+}
+
+@media only screen and (min-width:480px){
+/*	global styles are covering thi until 480px place anything in this query that needs to be in here from 480 until next query
+medium styles*/
+
+aside article{
+	float: left;
+	width: 48%;
+	margin: 0 1%;
+}
+
+
+#mainNav{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 72px;
+	left:0;
+	right:0;
+}
+main {
+	margin-top:65px; 
+}
+#mainNav ul{
+	width: 100%;
+	text-align: center;
+	background-color: #00668d;
+	max-width: 1200px;
+}
+
+#mainNav ul li{
+	display: inline-block;
+	/*width: 100%;*/
+}
+
+#mainNav ul li a{
+	margin: 0;
+}
+
+#mainNav li.toTop, #menu{
+	display: none;
+}
+
+
+main section img{
+	width: 40%;
+	margin-left: .5em;
+
+}
+}/*end media 480*/
+main, aside{
+	margin-top: 50px;
+
+}
+@media only screen and (min-width: 775px){
+/*larger styles*/
+main{
+	float: left;
+	width: 60%;
+
+}
+aside.aside{
+	float: left;
+	width: 40%;
+	text-align: center;
+}
+aside.sandiego{
+	float: left;
+	width: 40%;
+	text-align: center;
+	padding: 2em;
+}
+aside.bermuda{
+	float: left;
+	width: 40%;
+	text-align: center;
+	padding: 2em;
+}
+
+#container {
+    margin: auto 0;
+    overflow: hidden;
+    width: 95%;
+    padding: .625em 1.0548523% 1.5em; /* 10px/16px, 10px/948, 24px/16px */
+}
+
+
+
+
+	
+aside img{
+	padding:0.5em 0;
+}
+
+
+#pageFoot{
+	clear:both;
+}
+@media only screen and (min-width: 1000px){
+
+
+main section{
+    -webkit-column-count: 1; 
+    -moz-column-count: 1;
+    column-count: 1;
+	-webkit-column-rule: 2px solid #fff;
+	-moz-column-rule: 2px solid #fff;
+	column-rule: 2px solid #fff;
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+

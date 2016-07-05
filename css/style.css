@@ -1,0 +1,445 @@
+
+
+
+html {
+  margin: 0;
+  padding: 0;
+  
+
+}
+#container {
+  width: 960px;
+  margin: 0 auto;
+  background-image: url("../images/texture2.jpg");
+  background-repeat: repeat;
+  
+}
+
+#dhome {
+  background-color: #D7D7D5;
+  border-top: solid 20px #D7D7D5;
+}
+
+
+.headerLogo {
+  float: left;
+  margin-left: 20px;
+  margin-top:10px;
+}
+.headerLogo > img {
+  height: 115px;
+  width: 115px;
+}
+.headerLogo > img {
+  -moz-transition: -moz-transform 0.6s;
+  -o-transition: -o-transform 0.6s;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: transform 0.6s
+}
+.headerLogo > img:hover {
+  -moz-transform: rotate(360deg) scale(1.2);
+  -ms-transform: rotate(360deg) scale(1.2);
+  -o-transform: rotate(360deg) scale(1.2);
+  -webkit-transform: rotate(360deg) scale(1.2);
+  transform: rotate(360deg) scale(1.2)
+}
+
+.headerName {
+  color: #ffffff;
+  float:left;
+  margin: 20px 0 0 50px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 45px; 
+}
+.headerPhone {
+ color: #ffffff;
+ float:right;
+ margin: 35px 35px 20px 0;
+ font-family: 'Numans',Sans-Serif;
+ font-size: 34px; 
+}
+.email a{
+ color: #ffffff;
+ margin: 25px 0 20px 50px;
+ font-family: 'Numans',Sans-Serif;
+ font-size: 25px; 
+ text-decoration: none;
+}
+.email a:hover{
+ color: #69F6FB;
+ 
+}
+
+#main > h1 {
+  padding-left: 40px;
+}
+
+
+
+ul.nav {
+  position:relative;
+  padding-right:8px;
+  margin-top:-4px;
+  list-style: none;
+  overflow: hidden;
+  background: #F2D23D;
+  display: inline-block;
+}
+.nav li{
+
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  display: inline-block;
+  border-radius: 5px;
+  float: left;
+  padding-left:0px;
+  padding-right:3px;
+  margin:8px 19px;
+
+}
+
+
+.nav a{
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.nav a:hover {
+  -moz-transition: -moz-transform 0.6s;
+  -o-transition: -o-transform 0.6s;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  background-color: #F6E56F;
+  border-radius: 10px;
+}
+.nav a:active {
+  background-color: #F4E775;
+  color:#000000;
+  border-radius: 5px;
+}
+.nav li a.current{
+ color: #000000;
+ background-color: #F4E775;
+ border-radius: 10px;
+}
+
+button {
+  margin: 0 0 0 100px;
+  font-size:20px;
+  height: 40px;
+  width: 150px;
+  background-color:#386F38;
+  color: #ffffff; 
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.fb-like {
+
+  float:right;
+  position:relative;
+  left:95px;
+  
+
+}
+
+
+
+/*----------------Main image with sliding text----------*/
+
+
+#main {
+ width: 400px;
+ margin: 50px auto
+}
+
+#main img {
+  width: 100%
+}
+#main h1 {
+ color: #ffffff;
+ font-family: "Nunito", Verdana, Helvetica, Sans-Serif;
+ font-size: 21px;
+ padding-bottom: 18px;
+}
+#main p {
+ color: #ffffff;
+ font-family: "Ek+Mukta:400,500,600", Verdana, Helvetica, Sans-Serif;
+ font-size: 18px;
+ margin-bottom: 20px;
+}
+
+#main figure  {
+  margin: 0;
+  position: relative;
+  border: 5px solid white;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  display: block;
+  cursor: pointer;
+  overflow: hidden
+}
+
+#main figure:hover figcaption {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+
+}
+
+#main figcaption {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  -moz-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+#main figure img {
+  -moz-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s
+}
+
+#main figure:hover img {
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4)
+}
+
+#main figcaption h3,
+figcaption p {
+  padding: 10px 20px;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  left: 100%;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s
+}
+
+#main figure:hover h3, 
+figure:hover p {
+  left: 0
+}
+
+figcaption h3 {
+  background: black;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#main figcaption p {
+ font-family: "Nunito", Verdana, Helvetica, Sans-Serif;
+ font-size: 16px;
+ -moz-transition-delay: 1.2s;
+ -o-transition-delay: 1.2s;
+ -webkit-transition-delay: 1.2s;
+ transition-delay: 1.2s
+}
+
+#main figcaption h3 {
+ font-family: "Nunito", Verdana, Helvetica, Sans-Serif;
+ font-size: 20px;
+ -moz-transition-delay: 1s;
+ -o-transition-delay: 1s;
+ -webkit-transition-delay: 1s;
+ transition-delay: 1s
+}
+
+#main figcaption a {
+  color: #ffffff;
+}
+
+#ddetails > p { 
+ color: #ffffff;
+ font-size:23px;
+ padding:7px 0 10px 0;
+ margin:10px 0 50px 17px;
+ font-family: 'Nunito', sans-serif;
+ 
+}
+
+.button img{
+  width:140px;
+  height: 50px;
+  display: inline-block;
+  padding:50px 0 140px 410px;
+}
+
+.button {
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -webkit-transition: all .5s;
+  transition: all .5s
+}
+
+.button:hover {
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4)
+}
+
+/*----------- flip card -------------*/
+
+#flip ul {
+ padding-bottom: 150px;
+}
+#flip h2 {
+ padding-left: 130px;
+ font-size: 22px;
+ font-family: "Segue UI", Verdana, Helvetica, Sans-Serif;
+ 
+}
+.flip ul {
+  -webkit-perspective: 600;
+  
+}
+
+.flip li {
+  left:130px;
+  width: 100px;
+  height: 100px;
+  float: left;
+  list-style: none;
+  margin-right: 20px;
+  position: relative;
+  cursor: pointer
+}
+
+.flip li div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  _webkit-box-shadow: 0 6px 10px -8px rgba(0,0,0,.2);
+  -webkit-backface-visibility: hidden;
+}
+
+.flip li:hover .front {
+  z-index: 0;
+  -moz-transform: rotatey(180deg);
+  -ms-transform: rotatey(180deg);
+  -o-transform: rotatey(180deg);
+  -webkit-transform: rotatey(180deg);
+  transform: rotatey(180deg)
+}
+
+.flip li:hover .back {
+  -moz-transform: rotatey(0);
+  -ms-transform: rotatey(0);
+  -o-transform: rotatey(0);
+  -webkit-transform: rotatey(0);
+  transform: rotatey(0)
+}
+
+.flip .front {
+  z-index: 3;
+  color: black;
+  background: #e3e3e3;
+  -moz-border-radius: 45px;
+  -webkit-border-radius: 45px;
+  border-radius: 45px
+}
+
+.flip .back {
+  -moz-transform: rotatey(180deg);
+  -ms-transform: rotatey(180deg);
+  -o-transform: rotatey(180deg);
+  -webkit-transform: rotatey(180deg);
+  transform: rotatey(180deg)
+}
+
+/*------------------social icons-----------*/
+.textwidget {
+  display: inline;
+}
+
+.textwidget img{
+
+ margin:20px 30px 40px 32px;
+ 
+}
+.textwidget img {
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -webkit-transition: all .5s;
+  transition: all .5s
+}
+
+.textwidget a:hover img {
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4)
+}
+
+.social > p { 
+ color: #ffffff;
+ font-size:23px;
+ margin:-25px 0 30px 310px;
+ font-family: 'Nunito', sans-serif;
+ 
+}
+.porttext > p { 
+ color: #ffffff;
+ font-size:23px;
+ margin:-25px 0 60px 310px;
+ font-family: 'Nunito', sans-serif;
+ 
+}
+
+/*-----------footer-----------*/
+
+.footer {
+  padding: 30px 0 10px 440px;
+  background-color: #000000;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
